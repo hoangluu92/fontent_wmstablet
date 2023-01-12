@@ -1,0 +1,30 @@
+// Required
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/bootstrap/scss/functions";
+// Default variable overrides
+$font-size-root: 16px;
+$font-size-base: 14px;
+$font-size-sm: 14px;
+$font-size-lg: 16px;
+// Custom border input
+$input-border-color: #3d6614;
+$input-focus-border-color: #3d6614;
+$input-focus-box-shadow: 0 0 0 0.25rem rgb(63 115 11 / 29%);
+// Custom border select
+$form-select-border-color: #3d6614;
+$form-select-focus-border-color: #3d6614;
+$form-select-focus-box-shadow: 0 0 0 0.25rem rgb(63 115 11 / 29%);
+.col-form-label-sm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    @include font-size($font-size-sm);
+}
+
+$card-cap-bg: white;
+$theme-colors: ( "primary": $primary, "secondary": $secondary, "success": #3d7403, "info": $info, "warning": $warning, "danger": $danger, "light": $light, "dark": $dark);
+@import "./node_modules/bootstrap/scss/variables/";
+@import "./node_modules/bootstrap/scss/mixins/";
+@import "./node_modules/bootstrap/scss/utilities/";
+@import "./node_modules/bootstrap/scss/forms/";
+@import "./node_modules/bootstrap/scss/buttons/";
+@import "./node_modules/bootstrap/scss/card/";
