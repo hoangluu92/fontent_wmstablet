@@ -934,6 +934,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "rootingbase": () => (/* binding */ rootingbase),
 /* harmony export */   "service": () => (/* binding */ service),
 /* harmony export */   "serverHost": () => (/* binding */ serverHost),
+/* harmony export */   "projectName": () => (/* binding */ projectName),
 /* harmony export */   "InputMode": () => (/* binding */ InputMode),
 /* harmony export */   "menuIcons": () => (/* binding */ menuIcons),
 /* harmony export */   "menuColor": () => (/* binding */ menuColor),
@@ -1038,14 +1039,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "stot00901CheckLctnWs": () => (/* binding */ stot00901CheckLctnWs),
 /* harmony export */   "stot00901UpdateLctnWs": () => (/* binding */ stot00901UpdateLctnWs)
 /* harmony export */ });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _services_FTIN0010_ftin0010_store_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../services/FTIN0010/ftin0010-store.service */ 4217);
 /* harmony import */ var _services_FTOT0010_ftot0010_store_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../services/FTOT0010/ftot0010-store.service */ 2814);
 /* harmony import */ var _services_FTOT0020_ftot0020_store_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../services/FTOT0020/ftot0020-store.service */ 6319);
 /* harmony import */ var _services_FTOT0040_ftot0040_store_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/FTOT0040/ftot0040-store.service */ 8246);
 /* harmony import */ var _services_FTOT0060_ftot0060_store_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/FTOT0060/ftot0060-store.service */ 6347);
 /* harmony import */ var _services_FTOT0080_ftot0080_store_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../services/FTOT0080/ftot0080-store.service */ 965);
-
 
 
 
@@ -1065,7 +1064,10 @@ const service = 'tablet/webapi/wms/';
  * ビルド過程で稼働環境用のサーバー名に置き換え
  */
 function serverHost() {
-    return (0,_angular_core__WEBPACK_IMPORTED_MODULE_6__.isDevMode)() ? 'http://192.168.3.172:8080' : '';
+    return 'http://192.168.3.172:8080';
+}
+function projectName() {
+    return 'wms';
 }
 const InputMode = {
     NONE: "none",
@@ -17723,7 +17725,7 @@ class WebService {
       var start = location.origin.length + 1;
       var projectName = href.substring(start, href.indexOf("/", start));
       return jquery__WEBPACK_IMPORTED_MODULE_2__.ajax({
-        url: _common_Const__WEBPACK_IMPORTED_MODULE_1__.serverHost() + '/' + projectName + '/' + _common_Const__WEBPACK_IMPORTED_MODULE_1__.service + serviceName,
+        url: _common_Const__WEBPACK_IMPORTED_MODULE_1__.serverHost() + '/' + _common_Const__WEBPACK_IMPORTED_MODULE_1__.projectName() + '/' + _common_Const__WEBPACK_IMPORTED_MODULE_1__.service + serviceName,
         type: 'POST',
         data: JSON.stringify(data),
         dataType: 'json',
