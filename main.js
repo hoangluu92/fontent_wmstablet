@@ -17765,7 +17765,7 @@ class WebService {
       var start = location.origin.length + 1;
       var projectName = href.substring(start, href.indexOf("/", start));
       return jquery__WEBPACK_IMPORTED_MODULE_2__.ajax({
-        url: _common_Const__WEBPACK_IMPORTED_MODULE_1__.serverHost() + '/' + projectName + '/' + _common_Const__WEBPACK_IMPORTED_MODULE_1__.service + serviceName,
+        url: _common_Const__WEBPACK_IMPORTED_MODULE_1__.serverHost() + '/' + _common_Const__WEBPACK_IMPORTED_MODULE_1__.projectName() + '/' + _common_Const__WEBPACK_IMPORTED_MODULE_1__.service + serviceName,
         type: 'POST',
         data: JSON.stringify(data),
         dataType: 'json',
@@ -17882,7 +17882,7 @@ class WebService {
       var start = location.origin.length + 1;
       var projectName = href.substring(start, href.indexOf("/", start));
       return jquery__WEBPACK_IMPORTED_MODULE_2__.ajax({
-        url: _common_Const__WEBPACK_IMPORTED_MODULE_1__.serverHost() + '/' + projectName + '/' + serviceName,
+        url: _common_Const__WEBPACK_IMPORTED_MODULE_1__.serverHost() + '/' + _common_Const__WEBPACK_IMPORTED_MODULE_1__.projectName() + '/' + serviceName,
         type: 'POST',
         data,
         processData: false,
